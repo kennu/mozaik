@@ -11,7 +11,7 @@ module.exports = function (mozaik) {
 
     var config = mozaik.serverConfig;
 
-    var app = express();
+    var app = mozaik.app = express();
 
     mozaik.logger.info(chalk.yellow('serving static contents from ' + mozaik.baseDir + 'build'));
     app.use(express.static(mozaik.baseDir + '/build'));
